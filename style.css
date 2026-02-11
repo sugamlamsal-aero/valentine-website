@@ -3,9 +3,11 @@
   font-family: "Segoe UI", sans-serif;
 }
 
+/* BODY BACKGROUND */
 body {
   margin: 0;
-  background: url("https://raw.githubusercontent.com/sugamlamsal-aero/valentine-website/main/roses-bg.png") center/cover no-repeat fixed;
+  background: url("roses-bg.png") center/cover no-repeat fixed;
+  background-size: cover; /* ensures it always covers the screen */
 }
 
 /* PAGE SYSTEM */
@@ -31,7 +33,6 @@ body {
   display: block;
   border-radius: 18px;
 }
-
 
 /* TEXT */
 h1 {
@@ -68,14 +69,13 @@ button:hover {
 /* FINAL BUTTONS */
 .buttons {
   display: flex;
-  flex-direction: row;      /* horizontal */
-  justify-content: center;  /* center them */
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   gap: 15px;
   margin-top: 25px;
-  flex-wrap: wrap;          /* prevents overflow on small screens */
+  flex-wrap: wrap;
 }
-
 
 .yes.big {
   font-size: 1.2rem;
@@ -119,7 +119,7 @@ button:hover {
 
 /* FULL SCREEN HEART CONFETTI */
 .heart {
-  position: fixed;  /* over entire window */
+  position: fixed;
   pointer-events: none;
   z-index: 9999;
   animation-name: floatUp;
@@ -138,23 +138,21 @@ button:hover {
   }
 }
 
-
 .confetti-container {
-  position: relative; /* make card a reference for hearts */
-  overflow: hidden;   /* confetti won’t spill outside */
+  position: relative;
+  overflow: hidden;
 }
 
-/* override heart positioning for card container */
 .confetti-container .heart {
-  position: absolute; /* relative to the card now */
-  bottom: 0;          /* start from bottom of card */
+  position: absolute;
+  bottom: 0;
   pointer-events: none;
   z-index: 9999;
 }
 
 .final-message {
   position: absolute;
-  top: 50%; 
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   font-size: 2rem;
@@ -162,7 +160,7 @@ button:hover {
   text-align: center;
   opacity: 0;
   transition: all 0.8s ease;
-  pointer-events: none; /* lets you still click buttons */
+  pointer-events: none;
   z-index: 1000;
 }
 
@@ -173,20 +171,13 @@ button:hover {
 
 /* Make final page panel wider */
 .final-page .card {
-  max-width: 600px;   /* wider panel */
-  padding: 45px 50px; /* more breathing space */
+  max-width: 600px;
+  padding: 45px 50px;
 }
 
+/* RUNAWAY BUTTON */
 .no-btn {
   background: #444;
   color: white;
   transition: 0.2s ease;
 }
-
-
-
-
-
-
-
-
