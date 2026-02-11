@@ -1,21 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>For You 💖</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
+
+  <!-- PAGE 1 -->
+  <div class="page active">
+   <div class="card">
+    <img src="assets/intro.png" class="question-img fade-in" />
     <h1>Hey ❤️</h1>
     <p>I made something just for you</p>
-    <button onclick="goNext()">Click me 💌</button>
-  </div>
+    <button class="bounce" onclick="nextPage()">Click me 💌</button>
+ </div> 
+</div>
 
-  <script>
-    function goNext() {
-      window.location.href = "valentine.html";
-    }
-  </script>
+  <!-- PAGE 2 -->
+  <div class="page">
+   <div class="card">
+    <img src="assets/ready.png" class="question-img fade-in" />
+    <h1>Some question coming up… ready? 👀</h1>
+    <button class="bounce" onclick="nextPage()">Ready 😄</button>
+  </div>
+ </div>
+
+<!-- PAGE 6 (Shopping Question) -->
+<div class="page">
+  <div class="card">
+    <img src="assets/shopping.png" class="question-img fade-in" />
+
+    <h1>Do you want to go shopping? 🛍️💖</h1>
+
+    <div class="buttons">
+      <button class="yes" onclick="saveAnswer('shopping','Yes 🛍️'); nextPage();">
+        Yes 🛍️
+      </button>
+
+      <button class="no-btn" id="runawayBtn">
+        No 🙈
+      </button>
+    </div>
+  </div>
+</div>
+  <!-- PAGE 3 -->
+  <div class="page">
+   <div class="card">
+    <img src="assets/flowers.png" class="question-img fade-in" />
+    <h1>Would you rather get flowers 🌹 or chocolates 🍫?</h1>
+<button onclick="saveAnswer('gift','Flowers 🌹'); nextPage();">
+  Flowers 🌹
+</button>
+
+<button onclick="saveAnswer('gift','Chocolates 🍫'); nextPage();">
+  Chocolates 🍫
+</button>
+  </div>
+</div>
+
+  <!-- PAGE 4 -->
+  <div class="page">
+   <div class="card">
+    <img src="assets/coffee.png" class="question-img fade-in" />
+    <h1>Coffee ☕ or tea 🍵?</h1>
+<button onclick="saveAnswer('drink','Coffee ☕'); nextPage();">
+  Coffee ☕
+</button>
+
+<button onclick="saveAnswer('drink','Tea 🍵'); nextPage();">
+  Tea 🍵
+</button>
+  </div>
+</div>
+
+  <!-- PAGE 5 (HINT) -->
+  <div class="page">
+   <div class="card">
+    <img src="assets/hint.png" class="question-img fade-in" />
+    <h1>Now time for the main one, ready? 😭</h1>
+    <button class="bounce" onclick="nextPage()">👀</button>
+  </div>
+</div>
+
+<!-- FINAL PAGE -->
+<div class="page final-page">
+  <div class="card">
+    <img src="assets/final.png" class="question-img fade-in" />
+
+    <p class="preline fade-in">So… here it is 💖</p>
+    <p class="preline fade-in delay-1">I’ve been meaning to ask you something…</p>
+
+    <h1 class="fade-in delay-2">
+      Will you be my Valentine? 🌹❤️
+    </h1>
+
+    <div class="buttons hidden" id="finalButtons">
+      <button class="yes big" onclick="finalAnswer('Yes 💖')">Yes 💖</button>
+      <button class="yes" onclick="finalAnswer('Of course 🌹')">Of course 🌹</button>
+      <button class="yes" onclick="finalAnswer('I was waiting for this 😌')">I was waiting for this 😌</button>
+    </div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
 </body>
 </html>
