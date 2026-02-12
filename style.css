@@ -7,6 +7,17 @@ body {
   margin: 0;
 }
 
+/* FULLSCREEN BACKGROUND IMAGE */
+.bg-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;   /* sends it behind everything */
+}
+
 /* PAGE SYSTEM */
 .page {
   display: none;
@@ -178,6 +189,7 @@ button:hover {
   color: white;
   transition: 0.2s ease;
 }
+
 
 
 
